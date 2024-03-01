@@ -7,7 +7,7 @@ import { WebsocketNotification } from "../../domain/services/WebsocketNotificati
 export class NotificationWebsocketPayment implements WebsocketNotification {
   private url: any;
   constructor() {
-    this.url = process.env.SOCKET_URL || 'http://localhost:5000';
+    this.url = process.env.SOCKET_URL;
   }
 
   async sendNotificationwebsocket(payment: Payment): Promise<boolean> {
